@@ -7,19 +7,12 @@ RUN apt-get update && apt-get install -y \
     bedtools \
     libgl1-mesa-dev \
     libglu1-mesa-dev \
-    libpng12-dev \
-    libx11-dev \
-    libxml2-dev \
     libxslt-dev \
     libxt-dev \
     python-dev \
     python-numpy \
     python-pip \
-    r-cran-bbmisc \
-    r-cran-matrixstats \
-    r-cran-rgl \
     samtools \
-    x11proto-core-dev \
     && rm -rf /var/lib/apt/lists/*	  
 
 RUN pip install MACS2
