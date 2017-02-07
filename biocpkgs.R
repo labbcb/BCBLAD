@@ -8,17 +8,16 @@
 
 pkgs <- c('Biostrings', 'ShortRead', 'DESeq', 'edgeR','biomaRt',
           'TxDb.Hsapiens.UCSC.hg19.knownGene', 'Rsamtools',
-          'BSgenome.Hsapiens.UCSC.hg19',
-          'BSgenome', 'GenomicAlignments',
-          'GenomicRanges',
-          'pasillaBamSubset', 'pasilla',
-          'rtracklayer', 'ggbio', 'vsn',
-          'gplots','RColorBrewer','chipseq', 'Rsubread',
-          'htSeqTools','limma','org.Hs.eg.db',
-          'Rcade', 'ChIPQC', 'ChIPpeakAnno',
-          'affy', 'affyPLM', 'limma', 'hthgu133pluspmcdf', 'hgu133plus2.db', 'genefilter', 'GSEABase', 'KEGG.db', 'Category', 'ReportingTools',
-          'crlmm', 'hapmapsnp6', 'genomewidesnp6Crlmm', 'illuminaHumanv1.db', 'GGdata', 'snpStats'
-          )
+          'BSgenome.Hsapiens.UCSC.hg19', 'BSgenome',
+          'GenomicAlignments', 'GenomicRanges', 'pasillaBamSubset',
+          'pasilla', 'rtracklayer', 'ggbio', 'vsn', 'gplots',
+          'RColorBrewer','chipseq', 'Rsubread', 'htSeqTools','limma',
+          'org.Hs.eg.db', 'Rcade', 'ChIPQC', 'ChIPpeakAnno', 'affy',
+          'affyPLM', 'limma', 'hthgu133pluspmcdf', 'hgu133plus2.db',
+          'genefilter', 'GSEABase', 'KEGG.db', 'Category',
+          'ReportingTools', 'crlmm', 'hapmapsnp6',
+          'genomewidesnp6Crlmm', 'illuminaHumanv1.db', 'GGdata',
+          'snpStats')
 
 library(BiocInstaller)
 ## library(tools)

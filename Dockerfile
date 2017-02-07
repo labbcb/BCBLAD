@@ -1,18 +1,25 @@
 FROM rocker/tidyverse:3.3.2
 
-MAINTAINER benilton@unicamp.br
+MAINTAINER Benilton Carvalho <benilton@unicamp.br>
 
 ## Install tools for course
-RUN apt-get update \
-    && apt-get install -y \
-          bedtools \
-##          igv \
-          libxml2-dev \
-	  libxslt-dev \
-          python-dev \
-          python-numpy \
-          python-pip \
-          samtools \
+RUN apt-get update && apt-get install -y \
+    bedtools \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev \
+    libpng12-dev \
+    libx11-dev \
+    libxml2-dev \
+    libxslt-dev \
+    libxt-dev \
+    python-dev \
+    python-numpy \
+    python-pip \
+    r-cran-bbmisc \
+    r-cran-matrixstats \
+    r-cran-rgl \
+    samtools \
+    x11proto-core-dev \
     && rm -rf /var/lib/apt/lists/*	  
 
 RUN pip install MACS2
@@ -29,21 +36,9 @@ RUN mkdir -p /igv && \
     cd /usr/bin && \
     ln -s /igv/IGV_2.3.42/igv.sh ./igv
 
-RUN apt-get update \
-    && apt-get install -y \
-    libgl1-mesa-dev \
-    libglu1-mesa-dev \
-    libpng12-dev \
-    libx11-dev \
-    libxt-dev \
-    r-cran-bbmisc \
-    r-cran-matrixstats \
-    r-cran-rgl \
-    x11proto-core-dev
-
 COPY biocpkgs.R /home/rstudio/v2/
-## COPY myrepo /home/rstudio/v2/myrepo
 WORKDIR /home/rstudio/v2
 RUN Rscript biocpkgs.R
 WORKDIR /home/rstudio
 RUN rm -fr v2
+USER rstudio
