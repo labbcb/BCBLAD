@@ -1,5 +1,6 @@
-## Use R/Official
 FROM rocker/tidyverse:3.3.2
+
+MAINTAINER benilton@unicamp.br
 
 ## Install tools for course
 RUN apt-get update \
