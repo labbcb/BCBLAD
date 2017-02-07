@@ -34,4 +34,3 @@ WORKDIR /home/rstudio/v2
 RUN Rscript biocpkgs.R
 WORKDIR /home/rstudio
 RUN rm -fr v2
-USER rstudio
